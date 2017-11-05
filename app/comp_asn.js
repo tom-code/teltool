@@ -16,7 +16,8 @@ Vue.component('asn', {
     return data;
   },
     template: '\
-        <div><h2>asn1 decoder</h2> \
+        <div><h2>asn1 der/ber decoder</h2> \
+          copy & paste your asn1 data to see basic structure. when output is empty data are not correct der/ber <br/><br/> \
           <div> \
             <textarea v-model="hex_data" class="hex_input" rows="10"></textarea> \
           </div> \

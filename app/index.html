@@ -23,8 +23,9 @@
       </nav>
 
       <main class="main">
-        <asn v-if="selected == 'asn1decoder'"></asn>
+        <asn v-if="selected == 'asn1 decoder'"></asn>
         <div v-if="selected == 'welcome'">welcome!</div>
+        <pc_calc v-if="selected == 'pc calculator'"></pc_calc>
       </main>
 
     </div>
@@ -35,11 +36,12 @@
 
     <script>
       require("./comp_asn.js")
+      require("./comp_pcalc.js")
       var app = new Vue({
         el: '#app',
         data: {
-          selected: 'none',
-          links: ['welcome', 'asn1decoder', 'pc calculator']
+          selected: 'welcome',
+          links: ['welcome', 'asn1 decoder', 'pc calculator']
         }
       })
     </script>
