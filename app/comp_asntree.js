@@ -4,7 +4,7 @@ var asn = require('./asn.js');
 
 
 Vue.component('my-tree', {
-	props: ['tree'],
+  props: ['tree'],
     template: '<div style="position: relative; left:10px;">\
                   <div v-for="i in tree"> 0x{{i.tag.toString(16)}} {{i.value}} \
                    <my-tree :tree="i.child"/>\
@@ -14,15 +14,14 @@ Vue.component('my-tree', {
 
 
 Vue.component('asn-tree', {
-	props: ['hex_data'],
+  props: ['hex_data'],
     template: '<div>\
-                  <my-tree :tree="parsed"/>\
-                  </div>\
-                </div>',
+                 <my-tree :tree="parsed"/>\
+               </div>',
     computed: {
-    	parsed: function() {
+      parsed: function() {
         return asn.a1parse(this.hex_data);
-    	}
+      }
     }
 })
 

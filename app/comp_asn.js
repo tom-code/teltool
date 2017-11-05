@@ -16,10 +16,11 @@ Vue.component('asn', {
     return data;
   },
     template: '\
-        <div><h2>asn1 decoder</h2><div> \
-          <textarea v-model="hex_data" class="hex_input" rows="10"></textarea> \
-        </div> \
-        <asn-tree :hex_data="hex_data"/> \
+        <div><h2>asn1 decoder</h2> \
+          <div> \
+            <textarea v-model="hex_data" class="hex_input" rows="10"></textarea> \
+          </div> \
+          <asn-tree :hex_data="hex_data"/> \
         </div>'
 })
 

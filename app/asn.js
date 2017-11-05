@@ -1,4 +1,7 @@
 
+
+//simple asn1 decoder
+
 function char_to_bin(ch) {
   if (ch >= '0' && ch <='9') return ch-'0';
   ch = ch.toLowerCase();
