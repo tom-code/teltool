@@ -12,7 +12,7 @@ var data = {
 };
 
 Vue.component('asn', {
-	data: function() {
+  data: function() {
     return data;
   },
     template: '\

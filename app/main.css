@@ -36,14 +36,23 @@ input {
   width: 150px;
   overflow-x: hidden;
   overflow-y: auto;
-  border-right: 1px solid black;
+  xborder-right: 1px solid white;
+  xborder-bottom: 1px solid white;
+  xborder-left: 1px solid black;
+  xborder-top: 1px solid black;
   background-color: #a0a0a0;
-  height: 100%;
+  height: 600px;
   bottom: 0;
 }
 
 .main {
   flex: 1;
+
+  border-right: 1px solid #909090;
+  border-bottom: 1px solid #909090;
+  border-left: 1px solid #909090;
+  border-top: 1px solid #909090;
+
   position: relative;
   overflow: hidden;
   background-color: var(--bg-content);
