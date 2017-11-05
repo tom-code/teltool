@@ -1,0 +1,18 @@
+{
+  "name": "teleco",
+  "version": "1.0.0",
+  "description": "teleco1",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/...",
+  "keywords": [
+    "tele"
+  ],
+  "author": "tom",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "~1.7.8"
+  }
+}

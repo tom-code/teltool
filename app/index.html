@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>teleco tool</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+
+  <body>
+    <h1>teleco tool</h1>
+    
+    Node.js:  <script>document.write(process.versions.node)</script> </br>
+    Chromium: <script>document.write(process.versions.chrome)</script> </br>
+    Electron: <script>document.write(process.versions.electron)</script> </br></br>
+
+    <div class="flex" id="app">
+
+      <nav class="nav">
+        <div v-for="l in links">
+          <a class="lnk"  href="#" v-bind:class="{lnk_active: selected==l}" v-on:click="selected = l">{{l}}</a>
+          <br/>
+        </div>      
+      </nav>
+
+      <main class="main">
+        <asn v-if="selected == 'asn1decoder'"></asn>
+        <div v-if="selected == 'welcome'">welcome!</div>
+      </main>
+
+    </div>
+
+
+    <!--  https://unpkg.com/vue  -->
+    <script src="3rd/vue.js"></script>
+
+    <script>
+      require("./comp_asn.js")
+      var app = new Vue({
+        el: '#app',
+        data: {
+          selected: 'none',
+          links: ['welcome', 'asn1decoder', 'pc calculator']
+        }
+      })
+    </script>
+
+    
+  </body>
+</html>
